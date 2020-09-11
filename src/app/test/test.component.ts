@@ -13,5 +13,9 @@ export class TestComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  //test
+  onClick(){
+  alert("Hello world") ;
+  }
 
 }

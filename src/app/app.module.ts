@@ -11,6 +11,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FotterComponent } from './fotter/fotter.component';
 import { Page404Component } from './page404/page404.component';
 import { TestComponent } from './test/test.component';
+// service declaration
+import { data, DataService } from './services/data.service' ;
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +34,9 @@ import { TestComponent } from './test/test.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
