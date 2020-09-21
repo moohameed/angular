@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-test',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private data : DataService) { }
 
   namelist =["mohamed","ala","sami","basma"] ;
+  dataList = [] ;
 
   ngOnInit(): void {
+    this.dataList = this.data.getData() ;
   }
   //test
   onClick(){

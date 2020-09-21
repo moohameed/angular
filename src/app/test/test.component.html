@@ -7,3 +7,9 @@
 </div>
 <hr>
 <button (click)="onClick()" > plus d'information</button>
+<hr>
+<div>
+    <ul *ngFor="let data of dataList">
+        <li>{{data.name}} - {{data.age}}</li>
+    </ul>
+</div>

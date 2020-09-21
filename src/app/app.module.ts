@@ -11,8 +11,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FotterComponent } from './fotter/fotter.component';
 import { Page404Component } from './page404/page404.component';
 import { TestComponent } from './test/test.component';
+import {HttpClientModule } from '@angular/common/http' ;
 // service declaration
-import { data, DataService } from './services/data.service' ;
+import {DataService} from './services/data.service' ;
 
 
 
@@ -32,11 +33,10 @@ import { data, DataService } from './services/data.service' ;
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [
-    DataService
-  ],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
